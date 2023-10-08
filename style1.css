@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+input{
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid #fcc23f;
+    border-radius: 5px;
+    width: 300px ;
+    color: #eee;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+label{
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    padding:0 4px;
+    color: #070707;
+    background:transparent;
+    transition: all 0.2s ease;
+    pointer-events:none; 
+}
+input:not(:placeholder-shown)~label, 
+input:focus~label {
+    top: -8px;
+    font-size: 13px;
+}
+
+body {
+    height: 200vh;
+}
+
+.parent {
+    height: 500px;
+    width: 500px;
+    background-color: red;
+    margin: auto;
+    position: relative;
+}
+.parent .child1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 200px;
+    background: blue;
+}
+.parent .child1 .grand-child {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    background: white;
+}
+.parent .child2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    background: green;
+}
